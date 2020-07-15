@@ -8,4 +8,5 @@ end
 
 # use RACK::MethodOverride
 
+use UsersController
 run ApplicationController
