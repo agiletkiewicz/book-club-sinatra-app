@@ -6,7 +6,7 @@ end
 
 # mount controllers 
 
-# use RACK::MethodOverride
+use Rack::MethodOverride
 
 use BooksController
 use UsersController
