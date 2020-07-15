@@ -8,5 +8,6 @@ end
 
 # use RACK::MethodOverride
 
+use BooksController
 use UsersController
 run ApplicationController
