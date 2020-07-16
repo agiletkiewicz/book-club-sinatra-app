@@ -1,6 +1,8 @@
 
 <h1> Hey, <%= @user.username %>! Here is your reading list: </h1>
 <br><br>
+<%= @user.name %> 
+<%= @user.bio %>
 
 
 <! --  Show "to read" list -->
@@ -16,7 +18,7 @@
         <%= book.title %><br>
         <br>
         <%= book.author %><br>
-        <br> 
+        <br>
 
         <% if logged_in? && @user == current_user %>
             <! --  button to edit like -->

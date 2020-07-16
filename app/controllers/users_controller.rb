@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     get '/users' do 
         @users = User.all 
-        
+
         erb :'/users/index'
     end
 
@@ -69,6 +69,42 @@ class UsersController < ApplicationController
             redirect '/'
         end
     end
+
+
+# Edit or delete account
+
+    get '/users/:id/edit' do 
+        @user = User.find_by(id: params[:id])
+
+        erb :'users/edit'
+    end
+
+    patch '/users/:id' do 
+        @user = User.find_by(id: params[:id])
+
+        if logged_in? && current_user == @user
+            @user.update(params[:user])
+            redirect "/users/#{@user.id}"
+        else 
+            redirect "/"
+        end
+
+    end
+
+
+    delete '/users/:id' do 
+        @user = User.find_by(id: params[:id])
+
+        if logged_in? && current_user == @user
+            @user.likes.destroy
+            @user.destroy
+            redirect "/"
+        else
+            redirect "/"
+        end
+
+    end
+
 
 
 end

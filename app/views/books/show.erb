@@ -4,6 +4,7 @@
 <br>
 <h2> <%= @book.author %> </h2>
 <br>
+<p> See a mistake? <a href="/books/<%= @book.id %>/edit"> Edit this book. </a> </p>
 
 
 <% if !logged_in? %>

@@ -5,7 +5,7 @@ class BooksController < ApplicationController
 
     get '/books' do 
         @books = Book.all 
-        
+
         erb :'books/index'
     end
 
@@ -42,13 +42,12 @@ class BooksController < ApplicationController
         @book = Book.find_by(id: params[:id])
 
         @book.update(params[:book])
-        @book.save
 
         redirect "/books/#{@book.id}"
     end
 
 
-    # Book show page 
+# Book show page 
 
     get '/books/:id' do 
         @book = Book.find_by(id: params[:id])
