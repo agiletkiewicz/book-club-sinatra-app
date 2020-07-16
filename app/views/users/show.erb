@@ -1,2 +1,41 @@
 
-<h1> <%= @user.name %> </h1>
+<h1> Hey, <%= @user.username %>! Here is your reading list: </h1>
+<br><br>
+
+<h2> Want to read </h2> 
+<br>
+
+<% @user.books.each do |book| %> 
+
+    <% like = @user.likes.find_by(book_id: book.id) %>
+    <% if !like.read %>
+        <img src="<%= book.image_url %>"><br>
+        <%= book.title %><br>
+        <br>
+        <%= book.author %><br>
+    <% end %>
+    <br>
+
+<% end %> 
+
+<br>
+
+<h2> Have read </h2> 
+<br>
+
+<% @user.books.each do |book| %> 
+
+    <% like = @user.likes.find_by(book_id: book.id) %>
+        <% if like.read %>
+        <img src="<%= book.image_url %>"><br>
+        <%= book.title %><br>
+        <br>
+        <%= book.author %><br>
+    <% end %>
+    <br>
+
+<% end %> 
+<br>
+
+
+
