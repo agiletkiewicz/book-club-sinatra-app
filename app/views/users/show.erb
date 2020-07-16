@@ -9,10 +9,21 @@
 
     <% like = @user.likes.find_by(book_id: book.id) %>
     <% if !like.read %>
-        <img src="<%= book.image_url %>"><br>
+        
+        <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
         <%= book.title %><br>
         <br>
         <%= book.author %><br>
+        <br> 
+
+        <! --  button to edit like -->
+        <form method='post' action='/likes/<%= like.id %>'>
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="like[read]" value="1">
+        <input type="submit" value="Mark Read">
+        </form> 
+ 
+
     <% end %>
     <br>
 
@@ -27,10 +38,19 @@
 
     <% like = @user.likes.find_by(book_id: book.id) %>
         <% if like.read %>
-        <img src="<%= book.image_url %>"><br>
+        <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
         <%= book.title %><br>
         <br>
         <%= book.author %><br>
+        <br> 
+
+        <! --  button to edit like -->
+        <form method='post' action='/likes/<%= like.id %>'>
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="like[read]" value="0">
+        <input type="submit" value="Mark To Read">
+        </form> 
+
     <% end %>
     <br>
 

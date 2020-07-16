@@ -8,6 +8,18 @@ class LikesController < ApplicationController
     end
 
 
+# Edit like 
+
+    patch '/likes/:id' do
+        @like = Like.find_by(id: params[:id])
+
+        @like.update(params[:like])
+        @like.save
+
+        redirect "/users/#{current_user.id}"
+    end
+
+
 
 
 end
