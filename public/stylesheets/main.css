@@ -13,7 +13,7 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: white;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
@@ -81,6 +81,32 @@
     margin-top: 20px;
     padding-top: 20px;
   } 
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+
+
+  .item {
+    background-color: #fffff0;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    width: 270px;
+    margin: 5px;
+    padding: 10px;
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {

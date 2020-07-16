@@ -9,11 +9,13 @@
 <h2> Want to read </h2> 
 <br>
 
+<div class="flex-container">
 <% @user.books.each do |book| %> 
 
     <% like = @user.likes.find_by(book_id: book.id) %>
     <% if !like.read %>
         
+        <div class="item">
         <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
         <%= book.title %><br>
         <br>
@@ -35,12 +37,13 @@
             <input type="submit" value="Remove From List">
             </form> 
         <% end %>
- 
+        </div>
 
     <% end %>
     <br>
 
 <% end %> 
+</div>
 
 <br>
 
@@ -48,10 +51,12 @@
 <h2> Have read </h2> 
 <br>
 
+<div class="flex-container">
 <% @user.books.each do |book| %> 
 
     <% like = @user.likes.find_by(book_id: book.id) %>
         <% if like.read %>
+        <div class="item">
         <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
         <%= book.title %><br>
         <br>
@@ -73,11 +78,12 @@
             <input type="submit" value="Remove From List">
             </form> 
         <% end %>
-
+        </div>
     <% end %>
     <br>
 
 <% end %> 
+</div>
 <br>
 
 
