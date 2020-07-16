@@ -2,6 +2,8 @@
 <h1> Hey, <%= @user.username %>! Here is your reading list: </h1>
 <br><br>
 
+
+<! --  Show "to read" list -->
 <h2> Want to read </h2> 
 <br>
 
@@ -22,6 +24,14 @@
         <input type="hidden" name="like[read]" value="1">
         <input type="submit" value="Mark Read">
         </form> 
+        <br>
+
+        <! --  button to delete like -->
+        <form method='post' action='/likes/<%= like.id %>'>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Remove From List">
+        </form> 
+
  
 
     <% end %>
@@ -31,6 +41,7 @@
 
 <br>
 
+<! --  Show "have read" list -->
 <h2> Have read </h2> 
 <br>
 
@@ -50,6 +61,14 @@
         <input type="hidden" name="like[read]" value="0">
         <input type="submit" value="Mark To Read">
         </form> 
+        <br>
+
+        <! --  button to delete like -->
+        <form method='post' action='/likes/<%= like.id %>'>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Remove From List">
+        </form> 
+
 
     <% end %>
     <br>
