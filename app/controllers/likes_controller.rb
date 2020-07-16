@@ -13,8 +13,12 @@ class LikesController < ApplicationController
     patch '/likes/:id' do
         @like = Like.find_by(id: params[:id])
 
-        @like.update(params[:like])
-        @like.save
+        if logged_in? && @like.user_id == current_user.id
+            @like.update(params[:like])
+            @like.save
+        else
+            redirect '/'
+        end
 
         redirect "/users/#{current_user.id}"
     end

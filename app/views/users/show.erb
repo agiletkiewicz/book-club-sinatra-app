@@ -18,20 +18,21 @@
         <%= book.author %><br>
         <br> 
 
-        <! --  button to edit like -->
-        <form method='post' action='/likes/<%= like.id %>'>
-        <input type="hidden" name="_method" value="patch">
-        <input type="hidden" name="like[read]" value="1">
-        <input type="submit" value="Mark Read">
-        </form> 
-        <br>
+        <% if logged_in? && @user == current_user %>
+            <! --  button to edit like -->
+            <form method='post' action='/likes/<%= like.id %>'>
+            <input type="hidden" name="_method" value="patch">
+            <input type="hidden" name="like[read]" value="1">
+            <input type="submit" value="Mark Read">
+            </form> 
+            <br>
 
-        <! --  button to delete like -->
-        <form method='post' action='/likes/<%= like.id %>'>
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Remove From List">
-        </form> 
-
+            <! --  button to delete like -->
+            <form method='post' action='/likes/<%= like.id %>'>
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Remove From List">
+            </form> 
+        <% end %>
  
 
     <% end %>
@@ -55,20 +56,21 @@
         <%= book.author %><br>
         <br> 
 
-        <! --  button to edit like -->
-        <form method='post' action='/likes/<%= like.id %>'>
-        <input type="hidden" name="_method" value="patch">
-        <input type="hidden" name="like[read]" value="0">
-        <input type="submit" value="Mark To Read">
-        </form> 
-        <br>
+        <% if logged_in? && @user == current_user %>
+            <! --  button to edit like -->
+            <form method='post' action='/likes/<%= like.id %>'>
+            <input type="hidden" name="_method" value="patch">
+            <input type="hidden" name="like[read]" value="0">
+            <input type="submit" value="Mark To Read">
+            </form> 
+            <br>
 
-        <! --  button to delete like -->
-        <form method='post' action='/likes/<%= like.id %>'>
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Remove From List">
-        </form> 
-
+            <! --  button to delete like -->
+            <form method='post' action='/likes/<%= like.id %>'>
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Remove From List">
+            </form> 
+        <% end %>
 
     <% end %>
     <br>
