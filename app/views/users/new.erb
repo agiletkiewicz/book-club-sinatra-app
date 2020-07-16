@@ -3,13 +3,13 @@
 
 <form method="post" action="/users">
 
-    <label for="name">First name:</label><br>
+    <label for="name">First name:</label> *required<br>
     <input type="text" name="user[name]" value=""><br><br>
-    <label for="name">Write a short bio:</label><br>
+    <label for="name">Write a short bio:</label> *required<br>
     <textarea name="user[bio]" value=""></textarea><br><br>
-    <label for="username">Create a username:</label><br>
+    <label for="username">Create a username:</label> *required<br>
     <input type="text" name="user[username]" value=""><br><br>
-    <label for="password">Create a password:</label><br>
+    <label for="password">Create a password:</label> *required<br>
     <input type="password" name="user[password]" value=""><br><br>
 
     <input type="submit" value="Create your account">

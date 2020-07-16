@@ -81,11 +81,6 @@
     margin-top: 20px;
     padding-top: 20px;
   } 
-
-  #welcome {
-    display: none;
-  }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -117,9 +112,4 @@
     font-size: 18px;
     line-height: 24px;
   }
-
-  #welcome {
-    display: none;
-  }
-
 }

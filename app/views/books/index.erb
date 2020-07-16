@@ -1,6 +1,7 @@
 <h1> All books </h1>
-<br><br>
-
+<br>
+<p> Don't see a book that you are looking for? <a href="/books/new"> Add a book here </a> </p>
+<br>
 <% sorted_books = @books.sort_by {|book| -book.likes.count} %>
 
 <% sorted_books.each do |book| %> 

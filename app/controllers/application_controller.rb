@@ -13,6 +13,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
+    @welcome = "true"
+    
     erb :welcome
   end
 

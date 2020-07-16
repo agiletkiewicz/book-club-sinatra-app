@@ -29,8 +29,9 @@ class LikesController < ApplicationController
     delete '/likes/:id' do
         @like = Like.find_by(id: params[:id])
 
-        @like.destroy
-
+        if logged_in? && @like.user_id == current_user.id
+            @like.destroy
+        end    
         redirect "/users/#{current_user.id}"
     end
 
