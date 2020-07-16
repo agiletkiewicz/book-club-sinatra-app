@@ -1,1 +1,14 @@
+
+<img src="<%= @book.image_url %>">
 <h1> <%= @book.title %> </h1>
+<br>
+<h2> <%= @book.author %> </h2>
+<br>
+
+<form method="post" action="/likes">
+<input type="hidden" name="like[book_id]" value="<%= @book.id.to_i %>">
+<input type="hidden" name="like[user_id]" value="<%= current_user.id.to_i %>">
+<input type="radio" name="like[read]" value=0> Want to read <br>
+<input type="radio" name="like[read]" value=1> Have read <br>
+<input type="submit" value="Add to list">
+</form>

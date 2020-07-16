@@ -8,6 +8,7 @@ end
 
 use Rack::MethodOverride
 
+use LikesController
 use BooksController
 use UsersController
 run ApplicationController

@@ -1,1 +1,12 @@
-<h1> text </h1>
+<h1> All books </h1>
+<br><br>
+
+<% @books.each do |book| %> 
+
+    <a href="/books/<%= book.id %>"><img src="<%= book.image_url %>"></a> <br>
+    <h3> <%= book.title %> </h3> <br>
+    <h4> <%= book.author %> </h4> <br>
+
+    <br>
+
+<% end %>    
