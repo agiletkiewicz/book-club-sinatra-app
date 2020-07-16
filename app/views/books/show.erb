@@ -5,10 +5,22 @@
 <h2> <%= @book.author %> </h2>
 <br>
 
-<form method="post" action="/likes">
-<input type="hidden" name="like[book_id]" value="<%= @book.id.to_i %>">
-<input type="hidden" name="like[user_id]" value="<%= current_user.id.to_i %>">
-<input type="radio" name="like[read]" value=0> Want to read <br>
-<input type="radio" name="like[read]" value=1> Have read <br>
-<input type="submit" value="Add to list">
-</form>
+
+<% if !logged_in? %>
+
+   <p> Sign up or log in to add this book to your reading list </p>
+
+
+<% elsif @book.likes.find_by(user_id: current_user.id) %>
+
+    <p> This book is on <a href="/users/<%= current_user.id %>"> your list </a> </p>
+
+<% else %>
+    <form method="post" action="/likes">
+    <input type="hidden" name="like[book_id]" value="<%= @book.id.to_i %>">
+    <input type="hidden" name="like[user_id]" value="<%= current_user.id.to_i %>">
+    <input type="radio" name="like[read]" value=0> Want to read <br>
+    <input type="radio" name="like[read]" value=1> Have read <br>
+    <input type="submit" value="Add to list">
+    </form>
+<% end %>

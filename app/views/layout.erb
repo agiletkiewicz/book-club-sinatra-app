@@ -15,6 +15,23 @@
   </head>
   <body>
     <div class="wrapper">
+    
+
+    <nav>
+      <a button type="button" href="/books">All Books</a>
+      
+      <% if logged_in? %>
+      <a button type="button" href="/users/<%= current_user.id %>">My reading list</a>
+      <a button type="button" href="/logout">Logout</a>
+      <% else %>
+        <a button type="button" href="/login">Login</a>
+        <a button type="button" href="/signup">Signup</a>
+      <% end %>
+    </nav>
+
+
+
+
 
         <%= yield %>
 

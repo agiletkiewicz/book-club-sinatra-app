@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
 
 
+# Show all users and bios
+
+    get '/users' do 
+        @users = User.all 
+        
+        erb :'/users/index'
+    end
+
+
 
 # Create user and log them in 
 
