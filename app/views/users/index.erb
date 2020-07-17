@@ -1,15 +1,16 @@
 <h1> All users </h1>
 <br><br>
 
-
+<div class="flex-container">
 <% @users.each do |user| %> 
 
-    
+    <div class="item">
     <h3> <%= user.username %> </h3> <br>
-    <h4> <%= user.bio %> </h4> <br>
+    <h4> Bio: <br> <%= user.bio %> </h4> <br>
     <p> Books liked: <%= user.likes.count %> <br>
     <p> <a href="/users/<%= user.id %>">See reading list</a> </p> <br>
-
+    </div>
     <br>
 
 <% end %>    
+</div>
