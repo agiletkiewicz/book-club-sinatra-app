@@ -14,24 +14,30 @@
     <link rel="stylesheet" href="/stylesheets/main.css" />
   </head>
   <body>
-    <div class="wrapper">
+   
+  <header id="links">
+  <% if !@welcome %>
+    <a button type="button" href="/books">All Books</a>
+    <a button type="button" href="/users">All Users</a>
     
-    <% if !@welcome %>
-      <nav>
-        <a button type="button" href="/books">All Books</a>
-        <a button type="button" href="/users">All Users</a>
-        
-        <% if logged_in? %>
-        <a button type="button" href="/users/<%= current_user.id %>">My reading list</a>
-        <a button type="button" href="/logout">Logout</a>
-        <a button type="button" href="/users/<%= current_user.id %>/edit">Edit my profile</a>
-        <% else %>
-          <a button type="button" href="/login">Login</a>
-          <a button type="button" href="/users/new">Signup</a>
-        <% end %>
-      </nav>
-      <% end %>
-      <br><br>
+    <% if logged_in? %>
+    <a button type="button" href="/users/<%= current_user.id %>">My reading list</a>
+    <a button type="button" href="/logout">Logout</a>
+    <a button type="button" href="/users/<%= current_user.id %>/edit">Edit my profile</a>
+    <% else %>
+      <a button type="button" href="/login">Login</a>
+      <a button type="button" href="/users/new">Signup</a>
+    <% end %>
+ 
+  <% end %>
+  </header>
+  <br><br>
+  
+  
+  
+  <div class="wrapper">
+    
+
 
 
 
