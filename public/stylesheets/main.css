@@ -93,7 +93,7 @@
     justify-content: center;
   }
 
-  img {
+  .item img {
     width: 80%;
     display: block;
     margin: auto;
@@ -124,7 +124,7 @@
     text-decoration: none;
     vertical-align: middle;
     display: inline-block;
-    position:relative;
+    overflow: wrap;
   }
 
   input[type=submit] {
@@ -161,6 +161,10 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  body {
+    margin: none;
+  }
   .wrapper {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -193,4 +197,26 @@
   .bio {
     width: 100%;
   }
+
+  header a {
+    color: black;
+    text-decoration: none;
+    overflow-wrap: normal;
+    vertical-align: middle;
+    display: block;
+    position:relative;
+  }
+
+  header {
+    /* background-color: navy; */
+    background-image: none;
+    overflow: normal;
+    width: 100%;
+    height: auto;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+  }
+
 }
