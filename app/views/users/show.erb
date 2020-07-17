@@ -1,8 +1,18 @@
 
-<h1> Hey, <%= @user.username %>! Here is your reading list: </h1>
-<br><br>
-<%= @user.name %> 
-<%= @user.bio %>
+<% if logged_in? && current_user == @user %> 
+
+    <h1> Hi <%= @user.name %>! Here is your reading list. </h1>
+    <br>
+
+ <% else %>
+    <h1> <%= @user.username %></h1>
+    <br>
+    <div class="bio">
+    <h3> Bio: </h3>
+    <p> <%= @user.bio %><p>
+    <br>
+    </div>
+<% end %>
 
 
 <! --  Show "to read" list -->

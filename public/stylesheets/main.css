@@ -150,6 +150,14 @@
     /* IE6-9 */
 }
 
+.bio {
+  width: 40%; 
+  height: auto;
+  padding: 1%;
+  border-style: solid;
+  border-color: black;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -180,5 +188,9 @@
   h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .bio {
+    width: 100%;
   }
 }
