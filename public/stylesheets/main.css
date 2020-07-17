@@ -126,10 +126,21 @@
     overflow: wrap;
   }
 
+  .item input[type=submit]{
+    margin: 0px;
+  }
+
+  .delete input[type=submit]{
+    margin: 0px;
+    background: red;
+    color: white;
+  }
+
   input[type=submit] {
     border-radius: 5px;
     border: 5px;
     padding: 10px;
+    /* margin: 0px; */
     border-color: black;
     background: #f4f4f4;
     /* Old browsers */
@@ -230,6 +241,11 @@
     color: white;
     border-style: solid;
     border-color: black;
+    margin: auto;
+  }
+
+  
+  .page-heading {
     margin: auto;
   }
 

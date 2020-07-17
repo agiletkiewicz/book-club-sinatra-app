@@ -27,10 +27,8 @@
         
         <div class="item">
         <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
-        <%= book.title %><br>
-        <br>
-        <%= book.author %><br>
-        <br>
+        <h3><%= book.title %></h3>        
+        <h4><%= book.author %></h4>
 
         <% if logged_in? && @user == current_user %>
             
@@ -68,11 +66,9 @@
         <% if like.read %>
         <div class="item">
         <a href="/books/<%= book.id %>"> <img src="<%= book.image_url %>"> </a> <br>
-        <%= book.title %><br>
-        <br>
-        <%= book.author %><br>
-        <br> 
-
+        <h3><%= book.title %></h3>
+        <h4><%= book.author %></h4>
+        
         <% if logged_in? && @user == current_user %>
             <! --  button to edit like -->
             <form method='post' action='/likes/<%= like.id %>'>
@@ -94,6 +90,5 @@
 <% end %> 
 </div>
 <br>
-
 
 
