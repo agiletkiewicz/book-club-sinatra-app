@@ -1,4 +1,4 @@
-# Sinatra Reading List
+# Sinatra Book Club App
 
 A Sinatra-powered web application used to save and track reading lists.
 
@@ -24,7 +24,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/agilet
 
 ## Code of Conduct
 
-Everyone interacting in the Sinatra Mileage Tracker's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/mbade1/mileage_tracker/CODE_OF_CONDUCT.md).
+Everyone interacting in the Sinatra Book Club App's codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
 ## License
 
