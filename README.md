@@ -1,11 +1,11 @@
-# Sinatra Mileage Tracker
+# Sinatra Reading List
 
 A Sinatra-powered web application used to save and track reading lists.
 
 This app could be used for:
-* Allowing a user to keep track of the mileage on multiple pair(s) of running shoes.
-* An advertising/marketing tool for running shoe companies (When a user reaches their maximum mileage, an alert is sent to the user to buy new shoes). 
-* Saving user-created names of shoes, and tracking the mileage of their shoes.
+* Allowing a user to keep track of books read and books to read
+* Saving user-generated books
+* Browsing the reading lists of other users
 
 This project was created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
 
