@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
 
   end
 
+
   get "/" do
     @welcome = "true"
     

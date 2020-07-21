@@ -11,10 +11,10 @@
 <% sorted_books.each do |book| %> 
 
     <div class="item">
-    <a href="/books/<%= book.id %>"><img src="<%= book.image_url %>"></a> <br>
-    <h3> <%= book.title %> </h3> <br>
-    <h4> <%= book.author %> </h4> <br>
-    <p> Likes: <%= book.likes.count %> <br>
+    <a href="/books/<%= book.id %>"><img src="<%= book.image_url %>"></a>
+    <h3> <%= book.title %> </h3>
+    <h4> <%= book.author %> </h4>
+    <p> Likes: <%= book.likes.count %>
     </div>
     <br>
 

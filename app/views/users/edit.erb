@@ -5,7 +5,7 @@
     <h1> Edit my profile </h1>
     <br>
 
-    <form method="post" action="/users/<%= @user.id %>">
+    <form method="post" action="/users/<%= @user.id %>/edit">
 
     <lable for="name">Name:</label><br>
     <input type="text" name="user[name]" value="<%=@user.name%>"><br><br>
@@ -14,15 +14,15 @@
     <label for="username">Username:</label><br>
     <input type="text" name="user[username]" value="<%=@user.username%>"><br><br>
     <label for="password">Enter or change password:</label><br>
-    <input type="password" name="user[password]" value=""><br><br>
+    <input type="text" name="user[password]" value="<%= @user.password %>"><br><br>
 
     <input type="hidden" name="_method" value="patch">
     <input type="submit" value="Submit edits">
 
     </form>
 
-    <div class="delete"
-    <form method='post' action="/users/<%= @user.id %>">
+    <div class="delete">
+    <form method='post' action="/users/<%= @user.id %>/delete">
 
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete my account">

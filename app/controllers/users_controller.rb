@@ -79,7 +79,7 @@ class UsersController < ApplicationController
         erb :'users/edit'
     end
 
-    patch '/users/:id' do 
+    patch '/users/:id/edit' do 
         @user = User.find_by(id: params[:id])
 
         if logged_in? && current_user == @user
@@ -92,7 +92,7 @@ class UsersController < ApplicationController
     end
 
 
-    delete '/users/:id' do 
+    delete '/users/:id/delete' do 
         @user = User.find_by(id: params[:id])
 
         if logged_in? && current_user == @user

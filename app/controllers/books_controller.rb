@@ -1,5 +1,5 @@
-class BooksController < ApplicationController
 
+class BooksController < ApplicationController
 
 # Show all books 
 
@@ -18,13 +18,11 @@ class BooksController < ApplicationController
 
     post '/books' do 
         if Book.find_by(title: params[:book][:title].strip)
-            #show error
             redirect '/books/new'
         elsif params[:book][:title] != "" && params[:book][:author] != "" && params[:book][:image_url] != ""
             @book = Book.create(params[:book])
             redirect "/books/#{@book.id}"
         else
-            #show error 
             redirect '/books/new'
         end
     end
@@ -40,10 +38,11 @@ class BooksController < ApplicationController
 
     patch '/books/:id' do 
         @book = Book.find_by(id: params[:id])
-
-        @book.update(params[:book])
-
-        redirect "/books/#{@book.id}"
+        
+        if params[:book][:title] != "" && params[:book][:author] != "" && params[:book][:image_url] != ""
+            @book.update(params[:book])
+        end   
+        redirect "/books/#{@book.id}" 
     end
 
 
