@@ -11,10 +11,6 @@
     <input type="text" name="user[name]" value="<%=@user.name%>"><br><br>
     <lable for="bio">Bio:</label><br>
     <textarea name="user[bio]" value="<%=@user.bio%>"><%=@user.bio%></textarea><br><br>
-    <label for="username">Username:</label><br>
-    <input type="text" name="user[username]" value="<%=@user.username%>"><br><br>
-    <label for="password">Enter or change password:</label><br>
-    <input type="text" name="user[password]" value="<%= @user.password %>"><br><br>
 
     <input type="hidden" name="_method" value="patch">
     <input type="submit" value="Submit edits">
