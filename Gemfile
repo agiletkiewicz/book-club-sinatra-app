@@ -3,15 +3,22 @@ source 'http://rubygems.org'
 gem 'sinatra'
 gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'pg', '0.20'
+gem 'dotenv'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3', '~> 1.3.6'
+gem 'require_relative'
 gem 'thin'
-gem 'shotgun'
-gem 'pry'
 gem 'bcrypt'
-gem 'tux'
+gem 'sinatra-session', '~> 1.0'
 gem 'rack-flash3'
+
+group :development do
+  gem 'sqlite3', '~> 1.3.13'
+  gem 'shotgun'
+  gem 'pry'
+  gem 'tux'
+end
 
 group :test do
   gem 'rspec'
