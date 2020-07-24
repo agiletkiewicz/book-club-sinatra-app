@@ -1,5 +1,7 @@
 # Sinatra Book Club App
 
+test
+
 A Sinatra-powered web application used to save and track reading lists.
 
 This app could be used for:
