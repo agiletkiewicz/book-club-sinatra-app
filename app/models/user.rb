@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
     validates :username, uniqueness: true
     validates :name, :username, :bio, presence: true, on: :create
+    validates :name, :bio, presence: true, on: :update
 
     has_many :likes
     has_many :books, through: :likes

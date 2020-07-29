@@ -96,7 +96,6 @@ class UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
 
         if logged_in? && current_user == @user
-            @user.likes.destroy
             @user.destroy
             redirect "/"
         else
