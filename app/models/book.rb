@@ -4,4 +4,6 @@ class Book < ActiveRecord::Base
 
     has_many :users, through: :likes
 
+    belongs_to :genre
+
 end
