@@ -16,28 +16,27 @@ A Sinatra-powered web application created as part of the [Flatiron School's Onli
 
 * Ruby
 
-<br>
+
 ## Demo 🖥
 
-Manage reading list: add, edit and remove books<br>
+Manage reading list: add, edit and remove books
+
 ![](add-books.gif)
 
-
-Create and edit books<br>
+Create and edit books
 
 ![](create-book.gif)
 
-<br>
 ### Get Started
 
 Visit https://book-club-sinatra-app.herokuapp.com/ to view and use the app.
 
-Or install: <br>
-    * fork this repository<br>
-    * git clone to your local directory<br>
-    * cd book-club-sinatra-app<br>
-    * run bundle install<br>
-    * run shotgun and open in your favorite browser<br>
+Or install:
+* fork this repository
+* git clone to your local directory
+* cd book-club-sinatra-app
+* run bundle install
+* run shotgun and open in your favorite browser
 
 
 <br>
