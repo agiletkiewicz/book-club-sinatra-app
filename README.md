@@ -1,30 +1,42 @@
 # Sinatra Book Club App
 
 
-A Sinatra-powered web application used to save and track reading lists.
+Users can generate books in order to save and track their reading list.
 
-This app could be used for:
-* Allowing a user to keep track of books read and books to read
-* Saving user-generated books
-* Browsing the reading lists of other users
+A Sinatra-powered web application created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
 
-This project was created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
+## Features 🌟
 
-![](book-club.gif)
+* Generate books
+* Mark book as read or unread & track on user profile
+* Browse other user profiles
 
-## Install Instructions
+## Demo 🖥
+
+![](add-book.gif)
+
+![](create-book.gif)
+
+### Get Started
 
 Visit https://book-club-sinatra-app.herokuapp.com/ to view and use the app.
+
+Or install:
+    * fork this repository
+    * git clone to your local directory
+    * cd book-club-sinatra-app
+    * run bundle install
+    * run shotgun and open in your favorite browser
 
 
 ## Contributors Guide
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/agiletkiewicz/book-club-sinatra-app. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Code of Conduct
+### Code of Conduct
 
 Everyone interacting in the Sinatra Book Club App's codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
-## License
+### License
 
 The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
