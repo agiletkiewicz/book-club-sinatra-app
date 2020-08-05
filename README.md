@@ -19,9 +19,9 @@ A Sinatra-powered web application created as part of the [Flatiron School's Onli
 
 ## Demo 🖥
 
-![](add-books.gif | width=100)
+![](add-books.gif)
 
-![](create-book.gif | width=100)
+![](create-book.gif)
 
 ### Get Started
 
