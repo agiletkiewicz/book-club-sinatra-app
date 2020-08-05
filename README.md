@@ -19,9 +19,13 @@ A Sinatra-powered web application created as part of the [Flatiron School's Onli
 
 ## Demo 🖥
 
+Manage reading list: add, edit and remove books
 ![](add-books.gif)
 
+
+Create and edit books
 ![](create-book.gif)
+
 
 ### Get Started
 
