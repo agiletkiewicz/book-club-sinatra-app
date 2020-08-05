@@ -1,6 +1,5 @@
 # Sinatra Book Club App
 
-test
 
 A Sinatra-powered web application used to save and track reading lists.
 
@@ -11,14 +10,12 @@ This app could be used for:
 
 This project was created as part of the [Flatiron School's Online Web Developer program](https://flatironschool.com/).
 
+![](book-club.gif)
+
 ## Install Instructions
 
-- download or clone this project
-- cd into the book-club-sinatra-app directory
-- run `bundle install` in your console
-- run `db:migrate`
-- run `shotgun`
-- open your favorite browser and enter the given local url provided by the shotgun server!
+Visit https://book-club-sinatra-app.herokuapp.com/ to view and use the app.
+
 
 ## Contributors Guide
 
