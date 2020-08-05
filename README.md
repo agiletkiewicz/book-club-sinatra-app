@@ -36,6 +36,7 @@ Or install:
 * git clone to your local directory
 * cd book-club-sinatra-app
 * run bundle install
+* run rake db:migrate
 * run shotgun and open in your favorite browser
 
 
